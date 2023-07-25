@@ -1,0 +1,20 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\MyProject\cuda_ImageProc_Project\CudaImageProc\CudaImageProc>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin\nvcc.exe" -gencode=arch=compute_75,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64" -x cu   -I"C:\Users\~Sanket~\Desktop\OpenCVCuda Build\Build\install\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include"  -G -lineinfo  --keep-dir x64\Debug  -maxrregcount=0  --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64\Debug\vc143.pdb /FS /Zi /RTC1 /MDd " -o C:\MyProject\cuda_ImageProc_Project\CudaImageProc\CudaImageProc\x64\Debug\kernel.cu.obj "C:\MyProject\cuda_ImageProc_Project\CudaImageProc\CudaImageProc\kernel.cu" 
+  device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead.
+CUDACOMPILE : ptxas warning : Conflicting options --device-debug and --generate-line-info specified, ignoring --generate-line-info option
+CUDACOMPILE : nvcc warning : '--device-debug (-G)' overrides '--generate-line-info (-lineinfo)'
+  kernel.cu
+  device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead.
+C:\MyProject\cuda_ImageProc_Project\CudaImageProc\CudaImageProc\kernel.cu(57): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+     Creating library C:\MyProject\cuda_ImageProc_Project\CudaImageProc\x64\Debug\CudaImageProc.lib and object C:\MyProject\cuda_ImageProc_Project\CudaImageProc\x64\Debug\CudaImageProc.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+kernel.cu.obj : error LNK2019: unresolved external symbol "void __cdecl cv::error(int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,char const *,char const *,int)" (?error@cv@@YAXHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD1H@Z) referenced in function "public: __cdecl cv::MatStep::operator unsigned __int64(void)const " (??BMatStep@cv@@QEBA_KXZ)
+main.obj : error LNK2001: unresolved external symbol "void __cdecl cv::error(int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,char const *,char const *,int)" (?error@cv@@YAXHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEBD1H@Z)
+main.obj : error LNK2019: unresolved external symbol "public: __cdecl cv::Mat::Mat(class cv::Size_<int>,int)" (??0Mat@cv@@QEAA@V?$Size_@H@1@H@Z) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "public: __cdecl cv::Mat::~Mat(void)" (??1Mat@cv@@QEAA@XZ) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "public: bool __cdecl cv::Mat::empty(void)const " (?empty@Mat@cv@@QEBA_NXZ) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "class cv::Mat __cdecl cv::imread(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int)" (?imread@cv@@YA?AVMat@1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "bool __cdecl cv::imwrite(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class cv::debug_build_guard::_InputArray const &,class std::vector<int,class std::allocator<int> > const &)" (?imwrite@cv@@YA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV_InputArray@debug_build_guard@1@AEBV?$vector@HV?$allocator@H@std@@@3@@Z) referenced in function main
+C:\MyProject\cuda_ImageProc_Project\CudaImageProc\x64\Debug\CudaImageProc.exe : fatal error LNK1120: 6 unresolved externals

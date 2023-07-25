@@ -1,0 +1,9 @@
+﻿  main.cpp
+     Creating library C:\MyProject\cuda_ImageProc_Project\CudaImageProc\x64\Release\CudaImageProc.lib and object C:\MyProject\cuda_ImageProc_Project\CudaImageProc\x64\Release\CudaImageProc.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  1 of 130 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  CudaImageProc.vcxproj -> C:\MyProject\cuda_ImageProc_Project\CudaImageProc\x64\Release\CudaImageProc.exe
